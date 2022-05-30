@@ -32,19 +32,23 @@ var createNewTaskElement=function(taskString){
     var deleteButton=document.createElement("button");//delete button
     var deleteButtonImg=document.createElement("img");//delete button image
 
+    listItem.className="task-row-wrapper task-normal-mode";
+
     label.innerText=taskString;
-    label.className='task';
+    label.className='task-text label-text';
 
     //Each elements, needs appending
     checkBox.type="checkbox";
+    checkBox.className="task-checkbox";
     editInput.type="text";
-    editInput.className="task-text";
+    editInput.className="task-text input-text";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="task-button-edit";
+    editButton.className="task-button task-button-edit";
 
-    deleteButton.className="task-button-delete";
+    deleteButton.className="task-button task-button-delete";
     deleteButtonImg.src='./remove.svg';
+    deleteButtonImg.className="button-delete-img";
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -82,8 +86,8 @@ var editTask=function(){
 
     var listItem=this.parentNode;
 
-    var editInput=listItem.querySelector('input[type=text]');
-    var label=listItem.querySelector("label");
+    var editInput=listItem.querySelector('.input-text');
+    var label=listItem.querySelector(".label-text");
     var editBtn=listItem.querySelector(".task-button-edit");
     var containsClass=listItem.classList.contains("task-edit-mode");
     //If class of the parent is .task-edit-mode
@@ -155,7 +159,7 @@ addButton.addEventListener("click",ajaxRequest);
 var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
-    var checkBox=taskListItem.querySelector("input[type=checkbox]");
+    var checkBox=taskListItem.querySelector(".task-checkbox");
     var editButton=taskListItem.querySelector("button.task-button-edit");
     var deleteButton=taskListItem.querySelector("button.task-button-delete");
 
