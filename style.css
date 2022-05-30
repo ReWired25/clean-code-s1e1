@@ -54,11 +54,14 @@
   padding: 0px;
 }
 
-.task-row-wrapper, .todo-title {
+.task-row-wrapper,
+.todo-title {
   list-style: none;
 }
 
-.task-text, .task-checkbox, .task-button{
+.task-text,
+.task-checkbox,
+.task-button{
   outline: none;
 }
 
