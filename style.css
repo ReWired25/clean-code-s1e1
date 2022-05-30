@@ -50,16 +50,16 @@
 }
 
 .task-wrapper {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 
 .task-row-wrapper, .todo-title {
-  list-style:none;
+  list-style: none;
 }
 
-.task-text,.task-checkbox,.task-button{
-  outline:none;
+.task-text, .task-checkbox, .task-button{
+  outline: none;
 }
 
 .task-button {
@@ -167,14 +167,14 @@
 /* edit Task */
 
 .taks-wrapper .task-row-wrapper .input-text {
-  display:none
+  display: none
 }
 
 .taks-wrapper .task-row-wrapper.task-edit-mode .input-text {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
 .taks-wrapper .task-row-wrapper.task-edit-mode .label-text {
-  display:none;
+  display: none;
 }
